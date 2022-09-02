@@ -8,6 +8,31 @@
  *
  * @author 50497
  */
-public class plantas {
+public class plantas extends Entidad {
+    private String tipo;
+
+    public plantas() {
+        super();
+    }
+
+    public plantas(String nombre, float ataque, float vida) {
+        super(nombre, ataque, vida);
+        this.tipo = tipo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    @Override
+    public String toString() {
+        return "plantas{" + "tipo=" + tipo + '}';
+    }
+    
+    
     
 }

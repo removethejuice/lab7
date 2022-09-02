@@ -1,13 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ 
+public class clasico extends zombies {
+  //Tiene años de experiencia siendo zombie y una bandera La bandera tiene color y direcciónde imagen.
+    private  int experiencia;
+    private bandera b1;
 
-/**
- *
- * @author 50497
- */
-public class clasico {
+    public clasico() {
+        super();
+    }
+
+    public int getExperiencia() {
+        return experiencia;
+    }
+
+    public bandera getB1() {
+        return b1;
+    }
+
+    public void setExperiencia(int experiencia) {
+        this.experiencia = experiencia;
+    }
+
+    public void setB1(bandera b1) {
+        this.b1 = b1;
+    }
+
+    @Override
+    public String toString() {
+        return "clasico{" + "experiencia=" + experiencia + ", b1=" + b1 + '}';
+    }
     
 }

@@ -1,13 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ 
+public class explosiva extends plantas {
+  // Disparo: Tiene nombre de proyectil, color.• Defensa: Tiene altura, nivel de dureza y peso
+        private int magnitud;
 
-/**
- *
- * @author 50497
- */
-public class explosiva {
+    public explosiva() {
+        super();
+    }
+
+    public explosiva(String nombre, float ataque, float vida) {
+        super(nombre, ataque, vida);
+        this.magnitud = magnitud;
+    }
+
+    public int getMagnitud() {
+        return magnitud;
+    }
+
+    public void setMagnitud(int magnitud) {
+        this.magnitud = magnitud;
+    }
+
+    @Override
+    public String toString() {
+        return "explosiva{" + "magnitud=" + magnitud + '}';
+    }
+        
     
 }

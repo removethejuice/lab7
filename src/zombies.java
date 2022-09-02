@@ -8,6 +8,27 @@
  *
  * @author 50497
  */
-public class zombies {
-    
+public class zombies extends Entidad {
+    private String tipo;
+    public zombies() {
+        super();
+    }
+
+    public zombies(String nombre, float ataque, float vida) {
+        super(nombre, ataque, vida);
+        this.tipo = tipo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    @Override
+    public String toString() {
+        return "zombies{" + "tipo=" + tipo + '}';
+    }
 }
