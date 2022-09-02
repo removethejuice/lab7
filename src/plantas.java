@@ -10,7 +10,7 @@
  */
 public class plantas extends Entidad {
     private String tipo;
-
+private String rango;
     public plantas() {
         super();
     }
@@ -30,7 +30,7 @@ public class plantas extends Entidad {
 
     @Override
     public String toString() {
-        return "plantas{" + "tipo=" + tipo + '}';
+        return "plantas{" + "tipo=" + tipo + super.toString();
     }
     
     

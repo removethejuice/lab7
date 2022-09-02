@@ -32,7 +32,7 @@ public class disparo extends plantas {
 
     @Override
     public String toString() {
-        return "disparo{" + "proyectil=" + proyectil + ", color=" + color + '}';
+        return "disparo{" + "proyectil=" + proyectil + ", color=" + color + super.toString();
     }
     
 }
