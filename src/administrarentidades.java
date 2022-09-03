@@ -83,7 +83,17 @@ public class administrarentidades {
     }
 
     public void leerarchivo() throws IOException {
-
+        String Nombre = "";
+        String Rango = "";
+        String Proyectil = "";
+        String Color = "";
+        float ataque = 0;
+        float vida = 0;
+        int peso = 80;
+        int altura = 0;
+        int dureza = 0;
+        int magnitud = 0;
+        String[] x3;
         BufferedReader br = null;
         p1 = new ArrayList();
         try {
@@ -93,7 +103,47 @@ public class administrarentidades {
             for (int i = 0; i < x1.length; i++) {
                 String[] x2 = x1[i].split("_");
                 for (int w = 0; w < x2.length; w++) {
+                    if (x2[w].contains(":")) {
+                        x3 = x2[w].split(":");
+                        x3[1].substring(x3[i].indexOf("(" + 1));
+                        x3[1].substring(x3[i].indexOf(")"));
+                        String[] x5 = x3[1].split(";");
 
+                        for (int z = 0; z < x5.length; z++) {
+                            String x7[] = x5[z].split("=");
+                            if (x7[0].equals("Proyectil")) {
+                                Proyectil = x7[1];
+                            } else if (x7[0].equals("Color")) {
+                                Color = x7[1];
+                            } else if (x7[0].equals("Altura")) {
+                                altura = Integer.parseInt(x7[1]);
+                            } else if (x7[0].equals("Peso")) {
+                                peso = Integer.parseInt(x7[1]);
+                            } else if (x7[0].equals("Dureza")) {
+                                dureza = Integer.parseInt(x7[1]);
+                            } else if (x7[0].equals("Magnitud de Explosion")) {
+                                magnitud = Integer.parseInt(x7[1]);
+                            }
+                        }// fin del for
+
+                    } else {
+                        String[] x4 = x2[w].split(",");
+
+                        for (int z = 0; z < x2.length; z++) {
+                            String x6[] = x4[z].split("=");
+                            if (x6[0].equals("Nombre")) {
+                                Nombre = x4[1];
+                            } else if (x6[0].equals("Rango")) {
+                                Rango = x4[1];
+                            } else if (x6[0].equals("Ataque")) {
+                                ataque = Float.parseFloat(x4[1]);
+                            } else {
+                                vida = Float.parseFloat(x4[1]);
+                            }
+                        }// fin del for dentro del else
+                    }
+                    if (x3[0].equals("Defensa")) {
+                    }
                 }
 
             }

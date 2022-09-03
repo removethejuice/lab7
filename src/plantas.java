@@ -18,6 +18,16 @@ private String rango;
     public plantas(String nombre, float ataque, float vida) {
         super(nombre, ataque, vida);
         this.tipo = tipo;
+        
+        this.rango = rango;
+    }
+
+    public String getRango() {
+        return rango;
+    }
+
+    public void setRango(String rango) {
+        this.rango = rango;
     }
 
     public String getTipo() {
